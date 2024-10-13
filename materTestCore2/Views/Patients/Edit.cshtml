@@ -1,0 +1,50 @@
+﻿@model materTestCore2.Models.EGovModels.PatientViewModel
+
+@{
+    Layout = "~/Views/Shared/health_Layout.cshtml";
+
+    ViewData["Title"] = "Edit";
+}
+
+@*<h1>Edit</h1>
+*@
+<h4>إضافة إصابة</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                @Model.patient.full_name
+            </div>
+            <div class="form-group">
+                <input asp-for="patient.Uri" class="form-control" value="@Model.patient.Uri" hidden />
+                <span asp-validation-for="patient.Uri" class="text-danger"></span>
+            </div>
+            <select asp-for="hospital.Uri" asp-items="@Model.hospitalsList">
+                <option>اختر المشفى</option>
+            </select>
+            <select asp-for="injury.Uri" asp-items="@Model.injuriesList">
+                <option>اختر نوع الاصابة</option>
+            </select>
+            <div class="form-group">
+                <label asp-for="patient_Injuries.injury_date" class="control-label"></label>
+                <input asp-for="patient_Injuries.injury_date" class="form-control" />
+                <span asp-validation-for="patient_Injuries.injury_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="patient_Injuries.injury_percentage" class="control-label"></label>
+                <input asp-for="patient_Injuries.injury_percentage" class="form-control" />
+                <span asp-validation-for="patient_Injuries.injury_percentage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="حفظ" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">العودة لقائمى المرضى</a>
+</div>
+

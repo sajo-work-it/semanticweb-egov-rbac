@@ -1,0 +1,74 @@
+﻿@model IEnumerable<dynamic>
+@using materTestCore2.Helpers
+
+@{
+    Layout = "~/Views/Shared/military_Layout.cshtml";
+
+    ViewData["Title"] = "healthCondition";
+}
+<script src="~/js/jsScripts.js"></script>
+
+<h1>الأوضاع الصحية للضباط</h1>
+
+<div>
+    <form asp-action="healthConditionFiltered" asp-controller="Officers">
+        <input name="percentage" class="form-control" placeholder="أدخل مجموع الاصابات المطلوب" />
+
+        <input type="submit" value="فلترة حسب مجموع الاصابات" class="btn btn-primary" />
+
+    </form>
+
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                اسم الضابط
+            </th>
+            <th>
+                رتبة الضابط
+            </th>
+            <th>
+                نوع الاصابة
+            </th>
+            <th>
+                تاريخ الاصابة
+            </th>
+            <th>
+                نسبة الاصابة
+            </th>
+            <th>
+                المستشفى
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @item.officer.full_name
+                </td>
+                <td>
+                    @item.officer.Officer_rank
+                </td>
+                <td>
+                    @item.injury.injury_name
+                </td>
+                <td>
+                    @item.patient_Injury.injury_date
+                </td>
+                <td>
+                    @item.patient_Injury.injury_percentage
+                </td>
+                <td>
+                    @item.hospital.hospital_name
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<dynamic>
+@using materTestCore2.Helpers
+
+@{
+    Layout = "~/Views/Shared/military_Layout.cshtml";
+
+    ViewData["Title"] = "healthConditionFiltered";
+}
+<script src="~/js/jsScripts.js"></script>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                اسم الضابط
+            </th>
+            <th>
+                رتبة الضابط
+            </th>
+            <th>
+                مجموع الاصابات
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @item.officer.full_name
+                </td>
+                <td>
+                    @item.officer.Officer_rank
+                </td>
+
+                <td>
+                    @item.sumPercent
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<a asp-action="healthCondition">العودة للأوضاع الصحية</a>

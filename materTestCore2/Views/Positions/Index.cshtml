@@ -1,0 +1,45 @@
+﻿@model IEnumerable<materTestCore2.Models.EGovModels.military.Position>
+
+@{
+    Layout = "~/Views/Shared/military_Layout.cshtml";
+
+    ViewData["Title"] = "Index";
+}
+
+<h1>المسميات الوظيفية</h1>
+
+<p>
+@*    <a asp-action="Create">إضافة</a>
+*@</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.position_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.position_salary)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.position_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.position_salary)
+            </td>
+            
+@*            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>

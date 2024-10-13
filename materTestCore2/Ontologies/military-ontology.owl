@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#"
+     xml:base="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	 xmlns:personal-data-ontology="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	     <!-- Import the Person ontology -->
+    <owl:Ontology rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology">
+	        <owl:imports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology"/>
+	</owl:Ontology>
+    
+	
+	
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer_has_jop -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer_has_jop">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop_has_officer"/>
+    </owl:ObjectProperty>
+    
+	<owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop_has_officer">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer_has_jop"/>
+    </owl:ObjectProperty>
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_has_jop -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_has_jop">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop_has_position"/>		
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop_has_position">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_has_jop"/>
+    </owl:ObjectProperty>
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_has_jop -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_has_jop">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop_has_unit"/>
+    </owl:ObjectProperty>
+	
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop_has_unit">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_has_jop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop_year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop_year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer_rank -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer_rank">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer_specialization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer_specialization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_salary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_salary">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_positioning_place -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_positioning_place">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#PersonProfile"/>
+    </owl:Class>
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit"/>
+    
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

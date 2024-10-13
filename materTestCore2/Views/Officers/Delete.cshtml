@@ -1,0 +1,60 @@
+﻿@model materTestCore2.Models.EGovModels.military.Officer
+@using materTestCore2.Helpers
+
+@{
+    Layout = "~/Views/Shared/military_Layout.cshtml";
+
+    ViewData["Title"] = "Delete";
+}
+
+
+<h3>هل أنت متأكد من حذف الضابط</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.national_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.national_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.gender)
+            @Model.gender.boolGender()
+
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.full_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.full_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Officer_rank)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Officer_rank)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.officer_specialization)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.officer_specialization)
+        </dd>
+        
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+        <a asp-action="Index">العودة لقائمة الضباط</a>
+    </form>
+</div>

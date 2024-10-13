@@ -1,0 +1,76 @@
+﻿@model IEnumerable<materTestCore2.Models.EGovModels.education.StudentProfile>
+@using materTestCore2.Helpers
+
+@{
+    Layout = "~/Views/Shared/education_Layout.cshtml";
+
+    ViewData["Title"] = "Index";
+}
+
+<h1>الطلاب</h1>
+
+<p>
+    <a asp-action="Create">إضافة طالب</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.student_graduated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.student_year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.national_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gender)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.full_name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.student_graduated)
+                    @item.student_graduated.boolGraduated()
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.student_year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.national_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gender)
+                @item.gender.boolGender()
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.full_name)
+            </td>
+            
+            <td>
+                @Html.ActionLink("إضافة امتحان", "Edit", new { id=item.national_id }) |
+                    @Html.ActionLink("تفاصيل امتحانات الطالب", "Details", new {  uri=item.Uri  }) |
+
+@*                @Html.ActionLink("تفاصيل امتحانات الطالب", "Details", new {  id=item.national_id  }) |
+*@                @Html.ActionLink("حذف", "Delete", new {  id=item.national_id  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

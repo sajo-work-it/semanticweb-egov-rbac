@@ -1,0 +1,1471 @@
+<?xml version="1.0"?>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/administrator/ontologies/2022/10/individuals#"
+     xml:base="http://www.semanticweb.org/administrator/ontologies/2022/10/individuals"
+	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:personal-data-ontology="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#"
+         xmlns:education-ontology="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#"
+         xmlns:health-ontology="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#"
+         xmlns:military-ontology="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#">
+
+    <!-- Import the class ontologies -->
+    <owl:Ontology rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/individuals">
+        <owl:imports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology"/>
+    </owl:Ontology>
+
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person_12345">
+		<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#PersonProfile"/>
+		<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer"/>
+		<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient"/>
+	    <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#StudentProfile"/>
+
+        <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">حلب</address>
+        <full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">محمد علي العلي</full_name>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</gender>
+        <national_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12345</national_id>
+		
+		
+		<do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GAC501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GCS301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN502"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEP601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GET601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GMN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GOE301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GPM601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GTW301"/>
+        <student_graduated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</student_graduated>
+        <student_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_year>
+		
+		<officer_has_jop rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop1"/>
+        <officer_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">عقيد</officer_rank>
+        <officer_specialization rdf:datatype="http://www.w3.org/2001/XMLSchema#string">مهندس</officer_specialization>
+		
+		<patient_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p1_i1_tishreen"/>
+        <patient_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p1_i2_tishreen"/>
+        <is_soldier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_soldier>
+		
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person_22345">
+	<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#PersonProfile"/>
+	        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#StudentProfile"/>
+
+        <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">حمص</address>
+        <full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">راما محمد سعيد</full_name>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</gender>
+        <national_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22345</national_id>
+		
+		<do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GAC501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GCS301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN502"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEP601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GET601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GMN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GOE301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GPM601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GTW301"/>
+        <student_graduated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</student_graduated>
+        <student_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_year>
+		
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person_32345">
+	<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#PersonProfile"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient"/>
+	        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#StudentProfile"/>
+
+        <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">دمشق</address>
+        <full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">عماد حسن الحسين</full_name>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</gender>
+        <national_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32345</national_id>
+		
+		<do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GAC501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GCS301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN502"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEP601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GET601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GMN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GOE301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GPM601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GTW301"/>
+        <student_graduated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</student_graduated>
+        <student_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_year>
+		
+		 <patient_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p3_i1_albasel"/>
+        <is_soldier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_soldier>
+		
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person_42345">
+	<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#PersonProfile"/>
+	        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#StudentProfile"/>
+
+        <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">دمشق</address>
+        <full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">رنا عيسى خوري</full_name>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</gender>
+        <national_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42345</national_id>
+		
+		<do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GAC501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GCS301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN502"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEP601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GET601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GMN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GOE301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GPM601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GTW301"/>
+        <student_graduated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</student_graduated>
+        <student_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_year>
+		
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person_52345">
+		<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#PersonProfile"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient"/>
+	        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#StudentProfile"/>
+
+        <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">حماة</address>
+        <full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">مازن يونس محمود</full_name>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</gender>
+        <national_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52345</national_id>
+		
+		<do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GAC501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GCS301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN502"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEP601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GET601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GMN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GOE301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GPM601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GTW301"/>
+        <student_graduated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</student_graduated>
+        <student_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_year>
+		
+		<officer_has_jop rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop5"/>
+        <officer_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">لواء</officer_rank>
+        <officer_specialization rdf:datatype="http://www.w3.org/2001/XMLSchema#string">مشاة</officer_specialization>
+		
+		<patient_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p5_i4_hameesh"/>
+        <is_soldier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_soldier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#person_62345">
+	<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#PersonProfile"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#officer"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient"/>
+	        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#StudentProfile"/>
+
+        <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">دمشق</address>
+        <full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">فادي منير حسن</full_name>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</gender>
+        <national_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62345</national_id>
+		
+		 <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GAC501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GCS301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN501"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN502"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEP601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GET601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GMN401"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GOE301"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GPM601"/>
+        <do rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GTW301"/>
+        <student_graduated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</student_graduated>
+        <student_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_year>
+		
+		<officer_has_jop rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop6"/>
+        <officer_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">عميد</officer_rank>
+        <officer_specialization rdf:datatype="http://www.w3.org/2001/XMLSchema#string">طيار</officer_specialization>
+		
+		<patient_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p6_i3_hameesh"/>
+        <patient_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p6_i4_hameesh"/>
+        <is_soldier rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_soldier>
+		
+    </owl:NamedIndividual>
+	
+	
+	<!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GAC501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GAC501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GAC501"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GAC501"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GAC501"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GAC501"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GAC501"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GAC501"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">المحاسبة</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GCS301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GCS301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GCS301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GCS301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GCS301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GCS301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GCS301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GCS301"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">مهارات الحاسوب</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEN301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEN301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN301"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">اللغة الإنكليزية 1</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN401"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN401"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN401"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN401"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN401"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN401"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">اللغة الإنكليزية 2</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEN501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEN501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN501"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN501"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN501"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN501"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN501"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN501"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">اللغة الإنكليزية 3</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEN502 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEN502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN502"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN502"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN502"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN502"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN502"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN502"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">اللغة الإنكليزية 4</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEN601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEN601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN601"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">اللغة الإنكليزية 5</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEP601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GEP601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEP601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEP601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEP601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEP601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEP601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEP601"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">نظرية المعرفة وعلوم الحاسب</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GET601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GET601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GET601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GET601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GET601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GET601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GET601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GET601"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">أخلاقيات المهنة والمجتمع</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GMN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GMN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GMN401"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GMN401"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GMN401"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GMN401"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GMN401"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GMN401"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">أساسيات الإدارة</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GOE301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GOE301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GOE301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GOE301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GOE301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GOE301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GOE301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GOE301"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">مدخل إلى التعلم الإلكتروني</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GPM601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GPM601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GPM601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GPM601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GPM601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GPM601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GPM601"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GPM601"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">إدارة المشاريع المعلوماتية</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GTW301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#GTW301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#course"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GTW301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GTW301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GTW301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GTW301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GTW301"/>
+        <has_exam rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GTW301"/>
+        <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">مهارات التواصل والكتابة العلمية</course_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GAC501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GAC501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GCS301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GCS301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN502 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEN601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEP601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GEP601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GET601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GET601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GMN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GMN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GOE301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GOE301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GPM601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GPM601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GTW301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std1_GTW301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GAC501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GAC501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GCS301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GCS301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN502 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEN601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEP601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GEP601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GET601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GET601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GMN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GMN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GOE301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GOE301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GPM601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GPM601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GTW301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std2_GTW301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GAC501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GAC501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GCS301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GCS301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN502 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEN601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEP601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GEP601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GET601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GET601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GMN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GMN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GOE301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GOE301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GPM601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GPM601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GTW301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std3_GTW301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GAC501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GAC501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GCS301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GCS301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN502 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEN601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEP601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GEP601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GET601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GET601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GMN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GMN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GOE301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GOE301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GPM601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GPM601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GTW301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std4_GTW301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GAC501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GAC501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GCS301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GCS301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN502 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEN601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEP601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GEP601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GET601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GET601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GMN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GMN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GOE301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GOE301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GPM601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GPM601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GTW301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std5_GTW301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GAC501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GAC501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GCS301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GCS301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN501 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN502 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEN601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEP601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GEP601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GET601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GET601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GMN401 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GMN401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GOE301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GOE301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GPM601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GPM601">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GTW301 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam1_std6_GTW301">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#exam"/>
+        <exam_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#float">73.0</exam_grade>
+        <exam_pass rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</exam_pass>
+    </owl:NamedIndividual>
+    
+	<!-- http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#svu_ite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#svu_ite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology#college"/>
+        <college_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">الإجازة في الهندسة المعلوماتية</college_name>
+    </owl:NamedIndividual>
+    
+	<!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_Albasel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_Albasel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital"/>
+        <hospital_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p3_i1_albasel"/>
+        <hospital_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">مدينة طرطوس</hospital_address>
+        <hospital_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">مشفى الباسل بطرطوس</hospital_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_Hameesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_Hameesh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital"/>
+        <hospital_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p5_i4_hameesh"/>
+        <hospital_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p6_i3_hameesh"/>
+        <hospital_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p6_i4_hameesh"/>
+        <hospital_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">دمشق - برزة</hospital_address>
+        <hospital_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">مشفى حاميش العسكري</hospital_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_Tishreen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_Tishreen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital"/>
+        <hospital_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p1_i1_tishreen"/>
+        <hospital_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p1_i2_tishreen"/>
+        <hospital_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">دمشق - ضاحية الأسد</hospital_address>
+        <hospital_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">مشفى تشرين العسكري</hospital_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury"/>
+        <injury_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p1_i1_tishreen"/>
+        <injury_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p3_i1_albasel"/>
+        <injury_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">حروق</injury_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury"/>
+        <injury_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p1_i2_tishreen"/>
+        <injury_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">إصابة عضلية</injury_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury"/>
+        <injury_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p6_i3_hameesh"/>
+        <injury_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">إصابة عصبية</injury_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury"/>
+        <injury_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p5_i4_hameesh"/>
+        <injury_has rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p6_i4_hameesh"/>
+        <injury_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">كدمات</injury_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p1_i1_tishreen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p1_i1_tishreen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+        <injury_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</injury_percentage>
+        <injury_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</injury_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p1_i2_tishreen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p1_i2_tishreen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+        <injury_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</injury_percentage>
+        <injury_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</injury_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p3_i1_albasel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p3_i1_albasel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+        <injury_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</injury_percentage>
+        <injury_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</injury_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p5_i4_hameesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p5_i4_hameesh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+        <injury_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</injury_percentage>
+        <injury_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</injury_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p6_i3_hameesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p6_i3_hameesh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+        <injury_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</injury_percentage>
+        <injury_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</injury_date>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p6_i4_hameesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#p6_i4_hameesh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+        <injury_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</injury_percentage>
+        <injury_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</injury_date>
+    </owl:NamedIndividual>
+	
+	<!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+        <jop_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</jop_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+        <jop_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</jop_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop"/>
+        <jop_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</jop_year>
+    </owl:NamedIndividual>
+    
+	<!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_kaedFerka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_kaedFerka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position"/>
+        <position_has_jop rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop5"/>
+        <position_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">قائد فرقة</position_name>
+        <position_salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300000.0</position_salary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_kaedSareya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_kaedSareya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position"/>
+        <position_has_jop rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop6"/>
+        <position_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">قائد سرية</position_name>
+        <position_salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">270000.0</position_salary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_electronicWar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_electronicWar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit"/>
+        <unit_has_jop rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop1"/>
+        <unit_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">إدارة الحرب الإلكترونية</unit_name>
+        <unit_positioning_place rdf:datatype="http://www.w3.org/2001/XMLSchema#string">دمشق</unit_positioning_place>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_firka1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_firka1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit"/>
+        <unit_has_jop rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop5"/>
+        <unit_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">الفرقة الأولى</unit_name>
+        <unit_positioning_place rdf:datatype="http://www.w3.org/2001/XMLSchema#string">دمشق و ريفها</unit_positioning_place>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_firka2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit_firka2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#unit"/>
+        <unit_has_jop rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop6"/>
+        <unit_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">الفرقة الثانية</unit_name>
+        <unit_positioning_place rdf:datatype="http://www.w3.org/2001/XMLSchema#string">اللاذقية و ريفها</unit_positioning_place>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_raeesFeraHasoob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position_raeesFeraHasoob">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#position"/>
+        <position_has_jop rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology#jop1"/>
+        <position_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">رئيس فرع حاسوب</position_name>
+        <position_salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">280000.0</position_salary>
+    </owl:NamedIndividual>
+    
+
+
+
+</rdf:RDF>
+
+
+
+
+
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

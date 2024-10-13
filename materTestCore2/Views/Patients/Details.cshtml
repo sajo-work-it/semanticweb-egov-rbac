@@ -1,0 +1,62 @@
+﻿@model IEnumerable<dynamic>
+@{
+    Layout = "~/Views/Shared/health_Layout.cshtml";
+
+    ViewData["Title"] = "Details";
+}
+
+<h3>السجل المرضي للمريض</h3>
+@Model.First().patient.full_name
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                نوع الاصابة
+            </th>
+            <th>
+                تاريخ الاصابة
+            </th>
+            <th>
+                نسبة الاصابة
+            </th>
+            <th>
+                المشفى
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.First().injury == null)
+            {
+                <tr>
+                    <td>
+                        لم يتم إضافة أي اصابة للمريض بعد
+                    </td>
+
+                </tr>
+            }
+            else
+            {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.injury.injury_name
+                    </td>
+                    <td>
+                        @item.patient_Injury.injury_date
+                    </td>
+                    <td>
+                        @item.patient_Injury.injury_percentage
+                    </td>
+                    <td>
+                        @item.hospital.hospital_name
+                    </td>
+                </tr>
+            }
+            }
+
+    </tbody>
+</table>
+<div>
+    <a asp-action="Index">العودة لقائمى المرضى</a>
+</div>

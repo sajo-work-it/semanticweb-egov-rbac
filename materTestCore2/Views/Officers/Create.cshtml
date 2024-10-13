@@ -1,0 +1,71 @@
+﻿@model materTestCore2.Models.EGovModels.military.Officer
+@using materTestCore2.Helpers
+
+@{
+    Layout = "~/Views/Shared/military_Layout.cshtml";
+
+    ViewData["Title"] = "Create";
+}
+<script src="~/js/jsScripts.js"></script>
+
+
+<h4>إضافة ضابط</h4>
+<hr />
+<span class="text-danger" id="error">@TempData["ErrorMsg"] </span>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row form-inline">
+                <div class="form-group">
+                    <label asp-for="national_id" class="control-label"></label>
+                    <input asp-for="national_id" class="form-control" />
+                    <span asp-validation-for="national_id" class="text-danger"></span>
+                </div>
+                <div>
+                    <button class="btn btn-danger" onclick="return getPersonByNationalId()">الاستعلام حسب الرقم الوطني</button>
+
+                </div>
+
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        @Html.DisplayNameFor(model => model.gender) <br />
+                        <label id="genderDisplay"></label> <br />
+                        <input class="form-check-input" asp-for="gender" hidden />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label asp-for="address" class="control-label"></label>
+                    <input asp-for="address" class="form-control" readonly />
+                    <span asp-validation-for="address" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="full_name" class="control-label"></label>
+                    <input asp-for="full_name" class="form-control" readonly />
+                    <span asp-validation-for="full_name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Officer_rank" class="control-label"></label>
+                <input asp-for="Officer_rank" class="form-control" required/>
+                <span asp-validation-for="Officer_rank" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="officer_specialization" class="control-label"></label>
+                <input asp-for="officer_specialization" class="form-control" required/>
+                <span asp-validation-for="officer_specialization" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="حفظ" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">العودة لقائمة الضباط</a>
+</div>
+

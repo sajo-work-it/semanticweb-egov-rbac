@@ -1,0 +1,68 @@
+﻿@model IEnumerable<materTestCore2.Models.EGovModels.health.Patient>
+@using materTestCore2.Helpers
+
+@{
+    Layout = "~/Views/Shared/health_Layout.cshtml";
+
+    ViewData["Title"] = "Index";
+}
+
+<h1>المرضى</h1>
+
+<p>
+    <a asp-action="Create">إضافة مريض</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.is_soldier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.national_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.full_name)
+            </th>
+            <th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_soldier)
+                    @item.is_soldier.boolSoldier()
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.national_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gender)
+                @item.gender.boolGender()
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.full_name)
+            </td>
+            <td>
+            <td>
+                        @Html.ActionLink("إضافة إصابة", "Edit", new { id=item.national_id }) |
+                @Html.ActionLink("السجل المرضي", "Details", new {  id=item.national_id  }) |
+                @Html.ActionLink("حذف", "Delete", new {  id=item.national_id  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

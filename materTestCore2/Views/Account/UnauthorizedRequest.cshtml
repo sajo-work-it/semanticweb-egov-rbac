@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/Error_Layout.cshtml";
+
+    ViewData["Title"] = "Index";
+}
+    <div class="alert alert-danger">
+        <h3><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> إجراء/طلب غير مصرّح</h3>
+
+        <div class="text-center">
+            <h4>
+                لا تمتلك الصلاحية لتنفيذ أو عرض هذا المحتوى
+            </h4>
+            <p>@(ViewBag.AuthError)</p>
+        </div>
+        @if (ViewBag.ReturnUrl != null)
+        {
+            <p class="row">
+                <a class="pull-right btn btn-primary" href="@(ViewBag.ReturnUrl)"><i class="fa fa-refresh"></i> إعادة تسجيل الدخول</a>
+                <span style="direction:ltr" class="pull-left text-danger">@(ViewBag.ReturnUrl)</span>
+            </p>
+        }
+    </div>
+    <script>
+        $(function () {
+            toastr.clear();
+            toastr.warning("@(ViewBag.AuthError)", "تنبيـــه");
+            toastr.error("لا تمتلك الصلاحية لتنفيذ أو عرض هذا المحتوى", "إجراء غير مصرّح");
+            setTimeout(function () { alert("لا تمتلك الصلاحية لعرضى المحتوى: " + '@(ViewBag.ReturnUrl)'); }, 2000);
+        });
+    </script>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<materTestCore2.Models.EGovModels.health.Hospital>
+
+@{
+    Layout = "~/Views/Shared/health_Layout.cshtml";
+
+    ViewData["Title"] = "Index";
+}
+
+<h1>المستشفيات</h1>
+
+<p>
+@*    <a asp-action="Create">إضافة مستشفى</a>
+*@</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.hospital_address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hospital_name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.hospital_address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hospital_name)
+            </td>
+@*            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>

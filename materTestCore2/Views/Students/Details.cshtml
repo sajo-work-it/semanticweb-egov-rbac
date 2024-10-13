@@ -1,0 +1,66 @@
+﻿@model IEnumerable<dynamic>
+@using materTestCore2.Helpers
+
+@{
+    Layout = "~/Views/Shared/education_Layout.cshtml";
+
+    //ViewData["Title"] = "Details";
+}
+
+@*<h1>Details</h1>
+*@
+<div>
+    <h4> امتحانات الطالب</h4>
+    @Model.First().student.full_name
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    اسم المقرر
+                </th>
+                <th>
+                    درجة الامتحان
+                </th>
+                <th>
+                    تجاوز الامتحان
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.First().exam == null)
+            {
+                <tr>
+                    <td>
+                        هذا الطالب لم يتقدم لأي امتحان بعد
+                    </td>
+
+                </tr>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.course.course_name
+                        </td>
+                        <td>
+                            @item.exam.exam_grade
+                        </td>
+                        <td>
+                            @item.exam.exam_pass
+                        </td>
+
+                    </tr>
+                }
+            }
+            
+        </tbody>
+    </table>
+
+</div>
+<div>
+@*    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+*@    <a asp-action="Index">العودة لقائمة الطلاب</a>
+</div>

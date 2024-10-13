@@ -1,0 +1,82 @@
+﻿@*@using Microsoft.AspNet.Identity
+*@
+@*<script src="content/js/jquery.min.js"></script>
+<script src="content/js/bootstrap.min.js"></script>*@
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.dropdown-toggle').dropdown();
+    });
+    $(function () {
+        $("ul > li > a.change-pwd").click(function (e) {
+            e.preventDefault();
+            showLoading();
+            $.ajax({
+                url: "@Url.Action("ChangePassword", "Account", new { Area = "" })",
+                success: function (response) {
+                    stopLoading();
+                    $("#globalModalContainer").html(response);
+                    try {
+                        $("#globalModalContainer .modal").modal();
+                    } catch (ex) { }
+                },
+                error: function () {
+                    stopLoading();
+                }
+            });
+        });
+    });
+
+</script>
+@if (@*Request.IsAuthenticated*@ true)
+{
+
+        @Html.AntiForgeryToken()
+        <form asp-action="Logout" asp-controller="Account" method="post" id="logoutForm" class="navbar-left">
+            <ul class="nav navbar-nav">
+@*                <div>
+            <li>
+                <a class="nav-link text-dark" href="#" class="change-pwd"><i class="glyphicon glyphicon-lock"></i> تغيير كلمة المرور</a>
+            </li>
+                </div>*@
+                <div>
+            <li><a class="nav-link text-dark" href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-sign-out"></i> تسجيل الخروج</a></li>
+                </div>
+
+
+            </ul>
+        </form>
+       @*
+    <script>
+
+        $(function () {
+            $("ul > li > a.change-pwd").click(function (e) {
+                e.preventDefault();
+                showLoading();
+                $.ajax({
+                    url: "@Url.Action("ChangePassword", "Account", new { Area = "" })",
+                    success: function (response) {
+                        stopLoading();
+                        $("#globalModalContainer").html(response);
+                        try {
+                            $("#globalModalContainer .modal").modal();
+                        } catch (ex) { }
+                    },
+                    error: function () {
+                        stopLoading();
+                    }
+                });
+            });
+        });
+    </script>*@
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+
+        <li>@Html.ActionLink("تسجيل الدخول", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

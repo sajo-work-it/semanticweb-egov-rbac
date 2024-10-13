@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1727938327632" name="http://www.semanticweb.org/administrator/ontologies/2022/10/citizens-ontology" uri="citizens-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1727938327632" name="duplicate:http://www.semanticweb.org/administrator/ontologies/2022/10/data" uri="data.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1727938327632" name="duplicate:http://www.semanticweb.org/administrator/ontologies/2022/10/data" uri="data2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1727938327632" name="http://www.semanticweb.org/administrator/ontologies/2022/10/education-ontology" uri="education-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1727938327632" name="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology" uri="health-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1727938327632" name="http://www.semanticweb.org/administrator/ontologies/2022/10/individuals" uri="individuals.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1727938327632" name="http://www.semanticweb.org/administrator/ontologies/2022/10/military-ontology" uri="military-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1727938327632" name="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology" uri="personal-data-ontology.owl"/>
+    </group>
+</catalog>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<dynamic>
+@using materTestCore2.Helpers
+
+@{
+    Layout = "~/Views/Shared/military_Layout.cshtml";
+
+    ViewData["Title"] = "Details";
+}
+
+
+<div>
+    <h4>السجل الوظيفي للضابط</h4>
+    @Model.First().officer.full_name
+
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    الوحدة
+                </th>
+                <th>
+                    الوظيفة
+                </th>
+                <th>
+                    راتب الوظيفة
+                </th>
+                <th>
+                    سنة التعيين
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.First().jop == null)
+            {
+                <tr>
+                    <td>
+                        هذا الضابط غير معين في أي وظيفة بعد
+                    </td>
+
+                </tr>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.unit.unit_name
+                        </td>
+                        <td>
+                            @item.position.position_name
+                        </td>
+                        <td>
+                            @item.position.position_salary
+                        </td>
+                        <td>
+                            @item.jop.jop_year
+                        </td>
+
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Index">العودة لقائمة الضباط</a>
+</div>

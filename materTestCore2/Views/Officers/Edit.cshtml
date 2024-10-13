@@ -1,0 +1,40 @@
+﻿@model materTestCore2.Models.EGovModels.OfficerViewModel
+
+@{
+    Layout = "~/Views/Shared/military_Layout.cshtml";
+
+    ViewData["Title"] = "Edit";
+}
+
+
+<h4>تعيين الضابط في وظيفة</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                @Model.officer.full_name
+            </div>
+            <div class="form-group">
+                <input asp-for="officer.Uri" class="form-control" value="@Model.officer.Uri" hidden />
+                <span asp-validation-for="officer.Uri" class="text-danger"></span>
+            </div>
+            <select asp-for="unit.Uri" asp-items="@Model.unitsList">
+                <option>اختر الوحدة</option>
+            </select>
+            <select asp-for="position.Uri" asp-items="@Model.positionsList">
+                <option>اختر المنصب الوظيفي</option>
+            </select>
+
+            <div class="form-group">
+                <input type="submit" value="حفظ" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">العودة لقائمة الضباط</a>
+</div>
+

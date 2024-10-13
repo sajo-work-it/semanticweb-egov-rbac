@@ -1,0 +1,63 @@
+﻿@model materTestCore2.Models.EGovModels.education.StudentProfile
+@using materTestCore2.Helpers
+
+@{
+    Layout = "~/Views/Shared/education_Layout.cshtml";
+
+    ViewData["Title"] = "Delete";
+}
+
+
+<h3>هل انت متأكد من حذف الطالب؟</h3>
+<div>
+@*    <h4>StudentProfile</h4>
+*@    <hr />
+    <dl class="row">
+        
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.national_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.national_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.gender)
+            @Model.gender.boolGender()
+
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.full_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.full_name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.student_graduated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.student_graduated)
+            @Model.student_graduated.boolGraduated()
+
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.student_year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.student_year)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+        <a asp-action="Index">العودة لقائمة الطلاب</a>
+    </form>
+</div>

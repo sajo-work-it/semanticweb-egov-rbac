@@ -1,0 +1,93 @@
+﻿@model materTestCore2.Models.EGovModels.LoginViewModel
+@{
+    ViewBag.Title = "تسجيل الدخول";
+    
+    {
+        Layout = null;
+    }
+}
+<!--===============================================================================================-->
+@*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+*@
+<link href="@Url.Content("~/css/iconic/css/material-design-iconic-font.min.css")" rel="stylesheet" />
+<!--===============================================================================================-->
+<link href="@Url.Content("~/css/animate/animate.css")" rel="stylesheet" />
+<!--===============================================================================================-->
+<link href="@Url.Content("~/css/animate/hamburgers.min.css")" rel="stylesheet" />
+<!--===============================================================================================-->
+<link href="@Url.Content("~/css/animate/animsition.min.css")" rel="stylesheet" />
+<!--===============================================================================================-->
+<link href="~/css/animate/util.css" rel="stylesheet" />
+<link href="~/css/animate/main.css" rel="stylesheet" />
+<!--===============================================================================================-->
+
+<style>
+    input:not(.select2-search__field), select, textarea {
+        max-width: unset;
+    }
+
+    body, div.container-fluid.body-content {
+        padding: 0 !important;
+    }
+
+    span.focus-input100 {
+        margin-left: 20px !important;
+    }
+
+    .text-danger {
+        color: #fbc6c5;
+    }
+</style>
+
+
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('/Content/Images/bg-01.jpg');">
+            <div class="wrap-login100">
+                <div class="row text-right alert-danger warningDiv" style=" padding:5px; display:none;margin-top: -55px; margin-left:-55px; margin-right:-55px;">
+                    <span> @((ViewBag.LoginError != null) ? ViewBag.LoginError : "تسجيل الدخول مطلوب")</span>
+                </div>
+            <form asp-action="Login" method="post">
+                <span class="login100-form-title p-b-34 p-t-27">
+                    تسجيل الدخول
+                </span>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="UserName" class="control-label"></label>
+                        <input asp-for="UserName" class="form-control" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                <div class="form-group">
+                    <input type="submit" value="تسجيل الدخول" class="btn btn-primary" />
+                </div>
+            </form>
+
+            </div>
+        </div>
+    </div>
+    @section Scripts{
+    <script>
+        $(function () {
+            $(".navbar.navbar-default.navbar-fixed-top").hide().remove();
+            $("footer").hide().remove();
+            $("hr").hide().remove();
+            loader_.preloader('remove');
+        });
+    </script>
+        @if (ViewBag.ReturnUrl != null || ViewBag.LoginError != null)
+        {
+            <script>
+                $(function () {
+                    $(".warningDiv").slideDown(1000);
+                });
+            </script>
+        }
+    }
+@*}*@
+
+

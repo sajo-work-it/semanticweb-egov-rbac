@@ -1,0 +1,58 @@
+﻿@model materTestCore2.Models.EGovModels.personal.PersonProfile
+@using materTestCore2.Helpers
+
+@{
+    Layout = "~/Views/Shared/personal_Layout.cshtml";
+
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>إضافة مواطن</h4>
+<hr />
+<span class="text-danger">@TempData["ErrorMsg"] </span>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="national_id" class="control-label"></label>
+                <input asp-for="national_id" class="form-control" />
+                <span asp-validation-for="national_id" class="text-danger"></span>
+            </div>
+@*            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="gender" /> @Html.DisplayNameFor(model => model.gender)
+                </label>
+            </div>*@
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    @Html.CheckBox("gender") @Html.DisplayNameFor(model => model.gender)
+                </label>
+                @true.boolGender();
+            </div>
+@*            <div>
+                @Html.CheckBox("gender") @Html.DisplayNameFor(model => model.gender)
+            </div>*@
+            <div class="form-group">
+                <label asp-for="address" class="control-label"></label>
+                <input asp-for="address" class="form-control" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="full_name" class="control-label"></label>
+                <input asp-for="full_name" class="form-control" />
+                <span asp-validation-for="full_name" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="حفظ" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">عودة لقائمة المواطنين</a>
+</div>
+

@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#"
+     xml:base="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:personal-data-ontology="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#"
+     xmlns:health-ontology="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#">
+	     <!-- Import the Person ontology -->
+    <owl:Ontology rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology">
+	        <owl:imports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology"/>
+	</owl:Ontology>    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_has">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries_hospital"/>
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries_hospital">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_has"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury_has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury_has">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries_injury"/>
+    </owl:ObjectProperty>
+    
+	<owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries_injury">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury_has"/>
+    </owl:ObjectProperty>
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_has">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries_patient"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries_patient">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+		<owl:inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_has"/>
+    </owl:ObjectProperty>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury_date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury_percentage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury_percentage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#is_soldier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#is_soldier">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#hospital"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#injury"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient -->
+
+        <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2022/10/personal-data-ontology#PersonProfile"/>
+    </owl:Class>
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2022/10/health-ontology#patient_injuries"/>
+    
+
+
+   
+
+    
+</rdf:RDF>
+
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
